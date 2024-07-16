@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Page Title Here</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+  />
+  <style>
+    .copy-button {
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    function copyCodeToClipboard() {
+      var codeElement = document.querySelector("code");
+      var tempTextarea = document.createElement("textarea");
+      tempTextarea.textContent = codeElement.textContent;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempTextarea);
+      alert("Code copied to clipboard!");
+    }
+  </script>
+</head>
 <body>
-hello
+  <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
+  <button class="copy-button" onclick="copyCodeToClipboard()">Copy Text</button>
 </body>
-    <pre><code>wsg gang</code></pre>
-
 </html>
