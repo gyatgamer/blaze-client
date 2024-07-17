@@ -37,12 +37,12 @@
       tempTextarea.select();
       document.execCommand("copy");
       document.body.removeChild(tempTextarea);
-      alert("Code copied to clipboard!");
+      alert("Script copied to clipboard!");
     }
   </script>
 </head>
 <body>
-  <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-  <button class="copy-button" onclick="copyCodeToClipboard()">Copy</button>
+  <pre><code>loadstring(game:HttpGet("https://raw.githubusercontent.com/vdevxp/Ember/main/NewMainScript.lua", true))()</code></pre>
+  <button class="copy-button" onclick="copyCodeToClipboard()">Copy Script</button>
 </body>
 </html>
